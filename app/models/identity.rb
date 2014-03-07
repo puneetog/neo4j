@@ -1,4 +1,4 @@
-class Identity 
-    include Neo4j::ActiveNode
+class Identity
+  include Neo4j::ActiveNode
 
 end

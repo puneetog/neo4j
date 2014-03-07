@@ -9,6 +9,7 @@ class User
   property :created_at, type: DateTime
   property :updated_at, type: DateTime
   property :remember_token
+  property :admin, type: Boolean, default: false
 
   property :confirmation_token
   property :confirmed_at, type: DateTime
@@ -25,7 +26,7 @@ class User
   index :remember_token
 
   before_save { self.email = email.downcase }
-  before_save :secure_password
+  before_save :secure_password, if: lambda {|u| u.password_changed? }
 
   before_create :create_remember_token
   before_create :create_confirmation_token

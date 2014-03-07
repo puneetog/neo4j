@@ -1,3 +1,11 @@
+PATH
+  remote: vendor/gems/neo4j-will_paginate-0.2.1-java
+  specs:
+    neo4j-will_paginate (0.2.1-java)
+      activesupport (~> 4.0.3)
+      neo4j (>= 3.0.0.alpha.3)
+      will_paginate (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,6 +43,8 @@ GEM
       bcrypt (>= 3.1.3)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.1.4)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -65,6 +75,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faker (1.2.0)
+      i18n (~> 0.5)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.3-java)
@@ -234,6 +246,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     websocket (1.0.7)
+    will_paginate (3.0.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -243,10 +256,12 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   bootstrap-sass
+  bootstrap-will_paginate
   capybara
   childprocess
   coffee-rails (~> 4.0.0)
   factory_girl_rails
+  faker
   guard-rspec
   guard-spork
   jbuilder (~> 1.2)
@@ -254,6 +269,7 @@ DEPENDENCIES
   minitest
   neo4j (>= 3.0.0.alpha.3)
   neo4j-community (~> 2.0.0)
+  neo4j-will_paginate!
   omniauth
   omniauth-facebook
   pry
@@ -265,3 +281,4 @@ DEPENDENCIES
   therubyrhino
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate

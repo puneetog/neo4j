@@ -13,6 +13,9 @@ gem 'bootstrap-sass'
 gem 'neo4j', '>= 3.0.0.alpha.3'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'neo4j-will_paginate', path: 'vendor/gems/neo4j-will_paginate-0.2.1-java'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'minitest'
@@ -22,6 +25,7 @@ group :development, :test do
   gem 'guard-spork'
   gem 'childprocess'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'pry'
 end
 
