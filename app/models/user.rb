@@ -26,11 +26,13 @@ class User
   index :remember_token
 
   before_save { self.email = email.downcase }
-  before_save :secure_password, if: lambda {|u| u.password_changed? }
+  before_save :secure_password
 
   before_create :create_remember_token
   before_create :create_confirmation_token
   after_create  :send_email_confirmation
+
+  has_n :microposts
 
   class << self
 
